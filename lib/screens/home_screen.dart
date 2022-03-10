@@ -17,13 +17,29 @@ class _HomeScreenState extends State<HomeScreen> {
         height: double.infinity,
         color: Colors.white,
         child: Stack(
-          children: [
+          children:  [
             Positioned(
-              left: -100,
+              top: -200,
+              right: -100,
               child: CirculoFondo(
-                size: 200
+                colors: const [
+                  Colors.pinkAccent,
+                  Colors.pink,
+                ],
+                size: 425
               ),
-            )
+            ),
+            Positioned(
+              top: -170,
+              left: -50,
+              child: CirculoFondo(
+                colors: const [
+                  Colors.orange,
+                  Colors.deepOrangeAccent
+                ],
+                size: 300
+              ),
+            ),
           ],
         ),
       ),
