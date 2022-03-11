@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 
@@ -8,8 +7,8 @@ class CirculoFondo extends StatelessWidget {
   final List<Color> colors;
 
   const CirculoFondo({Key? key, required this.size, required this.colors}) 
-  : assert (size != null && size > 0 ),
-    assert (colors != null && colors.length >= 2 ),
+  : assert (size > 0 ),
+    assert (colors.length >= 2 ),
     super(key: key);
   
   @override
