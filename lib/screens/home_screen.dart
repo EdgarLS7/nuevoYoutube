@@ -1,3 +1,4 @@
+import 'package:flt_adaptable/utils/responsive.dart';
 import 'package:flt_adaptable/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +12,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final Responsive responsive = Responsive.of(context);
 
-    final Size size  = MediaQuery.of(context).size;
-    final double pinkSize   = size.width * 0.8;
-    final double orangeSize = size.width * 0.57;
+    final double pinkSize   = responsive.wPercent(80);
+    final double orangeSize = responsive.wPercent(57);
 
     return Scaffold(
       body: Container(
@@ -52,12 +53,13 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: [
                   IconContainer(
-                    size: size.width * 0.18,
+                    size: responsive.wPercent(18)
                   ),
-                  const SizedBox( height: 25,),
+                  SizedBox( height: responsive.dPercent(2.5),),
                   
-                  const Text('Hola Amigos! \n Bienvenido de Vuelta', 
+                  Text('Hola Amigos! \n Bienvenido de Vuelta', 
                   textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: responsive.dPercent(1.7)),
                   
                   ),
                 ],
