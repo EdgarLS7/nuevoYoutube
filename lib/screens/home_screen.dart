@@ -22,57 +22,55 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: () {
           FocusScope.of(context).unfocus();
         },
-        child: SingleChildScrollView(
-          child: Container(
-            width: double.infinity,
-            height: responsive.heigth,
-            color: Colors.white,
-            child: Stack(
-              alignment: Alignment.center,
-              children:  [
+        child: Container(
+          width: double.infinity,
+          height: responsive.heigth,
+          color: Colors.white,
+          child: Stack(
+            alignment: Alignment.center,
+            children:  [
+              Positioned(
+                top: -pinkSize * 0.43,
+                right: -pinkSize * 0.2,
+                child: CirculoFondo(
+                  size: pinkSize,
+                  colors: const [
+                    Colors.pinkAccent,
+                    Colors.pink,
+                  ],
+                ),
+              ),
+              Positioned(
+                top: -orangeSize * 0.55,
+                left: -orangeSize * 0.15,
+                child: CirculoFondo(
+                  size: orangeSize,
+                  colors: const [
+                    Colors.orange,
+                    Colors.deepOrangeAccent
+                  ],
+                ),
+              ),
+            
                 Positioned(
-                  top: -pinkSize * 0.43,
-                  right: -pinkSize * 0.2,
-                  child: CirculoFondo(
-                    size: pinkSize,
-                    colors: const [
-                      Colors.pinkAccent,
-                      Colors.pink,
-                    ],
-                  ),
-                ),
-                Positioned(
-                  top: -orangeSize * 0.55,
-                  left: -orangeSize * 0.15,
-                  child: CirculoFondo(
-                    size: orangeSize,
-                    colors: const [
-                      Colors.orange,
-                      Colors.deepOrangeAccent
-                    ],
-                  ),
-                ),
-              
-                  Positioned(
-                  top: orangeSize * 0.45,
-                  child: Column(
-                    children: [
-                      IconContainer(
-                        size: responsive.wPercent(18)
-                      ),
-                      SizedBox( height: responsive.dPercent(2.5),),
-                      
-                      Text('Hola Amigos! \n Bienvenido de Vuelta', 
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: responsive.dPercent(1.7)),
-                      
-                      ),
-                    ],
-                  )
-                ),
-                const LoginForm()
-              ],
-            ),
+                top: orangeSize * 0.45,
+                child: Column(
+                  children: [
+                    IconContainer(
+                      size: responsive.wPercent(18)
+                    ),
+                    SizedBox( height: responsive.dPercent(2.5),),
+                    
+                    Text('Hola Amigos! \n Bienvenido de Vuelta', 
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: responsive.dPercent(1.7)),
+                    
+                    ),
+                  ],
+                )
+              ),
+              const LoginForm()
+            ],
           ),
         ),
       ),

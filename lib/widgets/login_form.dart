@@ -23,6 +23,9 @@ class _LoginFormState extends State<LoginForm> {
               keyboardType: TextInputType.emailAddress,
               label: 'Email Address',
             ),
+
+            SizedBox(height: 20),
+
             InputText(
               keyboardType: TextInputType.text,
               obscureText: true,
